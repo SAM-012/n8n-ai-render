@@ -12,23 +12,23 @@ services:
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
         fromDatabase:
-          name: existingDB  # 🔁 Replace with name of your existing DB
+          name: renderdb
           property: host
       - key: DB_POSTGRESDB_DATABASE
         fromDatabase:
-          name: existingDB  # 🔁
+          name: renderdb
           property: database
       - key: DB_POSTGRESDB_PORT
         fromDatabase:
-          name: existingDB  # 🔁
+          name: renderdb
           property: port
       - key: DB_POSTGRESDB_USER
         fromDatabase:
-          name: existingDB  # 🔁
+          name: renderdb
           property: user
       - key: DB_POSTGRESDB_PASSWORD
         fromDatabase:
-          name: existingDB  # 🔁
+          name: renderdb
           property: password
       - key: PORT
         value: 5678
@@ -42,5 +42,3 @@ services:
         value: fr
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
-
-# ❌ Removed the databases section to avoid creation of another Free Tier DB
